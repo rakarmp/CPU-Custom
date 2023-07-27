@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kode CPU Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f2f2f2;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        code {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kode CPU Configuration</h1>
+
+    <h2>Penggunaan dan Deskripsi Kode</h2>
+    <p>
+        Kode ini digunakan untuk mengatur konfigurasi CPU pada sistem.
+        Berikut adalah fungsi-fungsi yang tersedia:
+    </p>
+    <pre>
+        cpus - mendapatkan CPU yang tersedia
+        online - [01]+ - membalik status inti CPU
+        reset - [policy] - mengatur ulang semua frekuensi maksimum dan minimum inti CPU dengan kebijakan CPU
+        freqs - [0-9]+ - frekuensi yang tersedia untuk CPU yang diberikan
+        cur - [0-9]+ - frekuensi saat ini untuk CPU yang diberikan
+        max - [0-9]+ - frekuensi maksimum saat ini untuk CPU yang diberikan
+        min - [0-9]+ - frekuensi minimum saat ini untuk CPU yang diberikan
+        getp - [0-9]+ - mendapatkan kebijakan saat ini untuk CPU yang diberikan
+        setf - [0-9]+, [frekuensi] - mengatur frekuensi untuk CPU yang diberikan (userspace)
+        setmax - [0-9]+, [frekuensi] - mengatur frekuensi maksimum untuk CPU yang diberikan
+        setmin - [0-9]+, [frekuensi] - mengatur frekuensi minimum untuk CPU yang diberikan
+        setp - [0-9]+, [policy]
+    </pre>
+
+    <h2>Contoh Penggunaan</h2>
+    <p>Untuk mendapatkan CPU yang tersedia:</p>
+    <pre><code>cpus</code></pre>
+
+    <p>Untuk membalikkan status inti CPU menjadi online:</p>
+    <pre><code>online [01]+</code></pre>
+
+    <p>Untuk mengatur ulang semua frekuensi maksimum dan minimum inti CPU dengan kebijakan CPU:</p>
+    <pre><code>reset [policy]</code></pre>
+
+    <p>Untuk mendapatkan frekuensi yang tersedia untuk CPU tertentu:</p>
+    <pre><code>freqs [0-9]+</code></pre>
+
+    <p>Untuk mendapatkan frekuensi saat ini untuk CPU tertentu:</p>
+    <pre><code>cur [0-9]+</code></pre>
+
+    <p>Untuk mendapatkan frekuensi maksimum saat ini untuk CPU tertentu:</p>
+    <pre><code>max [0-9]+</code></pre>
+
+    <p>Untuk mendapatkan frekuensi minimum saat ini untuk CPU tertentu:</p>
+    <pre><code>min [0-9]+</code></pre>
+
+    <p>Untuk mendapatkan kebijakan saat ini untuk CPU tertentu:</p>
+    <pre><code>getp [0-9]+</code></pre>
+
+    <p>Untuk mengatur frekuensi untuk CPU tertentu (userspace):</p>
+    <pre><code>setf [0-9]+, [frekuensi]</code></pre>
+
+    <p>Untuk mengatur frekuensi maksimum untuk CPU tertentu:</p>
+    <pre><code>setmax [0-9]+, [frekuensi]</code></pre>
+
+    <p>Untuk mengatur frekuensi minimum untuk CPU tertentu:</p>
+    <pre><code>setmin [0-9]+, [frekuensi]</code></pre>
+
+    <p>Untuk mengatur kebijakan untuk CPU tertentu:</p>
+    <pre><code>setp [0-9]+, [policy]</code></pre>
+</body>
+</html>
